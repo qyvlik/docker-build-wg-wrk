@@ -5,8 +5,8 @@ ARG WRK_VERSION=4.2.0
 
 RUN /bin/sh -c set -ex
 
-RUN apk add --no-cache git && \
-    apk add --no-cache --virtual .build-deps perl linux-headers make gcc libc-dev && \
+RUN apk add --no-cache libgcc && \
+    apk add --no-cache --virtual .build-deps git perl linux-headers make gcc libc-dev && \
     git clone -b ${WRK_VERSION} https://github.com/wg/wrk && \
     cd wrk && \
     make &&\
