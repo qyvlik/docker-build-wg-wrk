@@ -14,6 +14,7 @@ RUN apk add --no-cache libgcc && \
     cd .. && \
     rm -rf wrk && \
     luarocks install lua-cjson &&\
+    luarocks install snowflake &&\
     apk del .build-deps
 
 ENTRYPOINT ["wrk"]

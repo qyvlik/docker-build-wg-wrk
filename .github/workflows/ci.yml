@@ -30,5 +30,4 @@ jobs:
             WRK_VERSION=4.2.0
           push: true
           tags: |
-            qyvlik/wrk:4.2.0
-            qyvlik/wrk:latest
+            qyvlik/wrk:4.2.0-tools
